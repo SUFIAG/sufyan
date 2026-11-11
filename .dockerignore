@@ -1,0 +1,4 @@
+*
+!nginx.conf
+!security-headers.conf
+!public/**

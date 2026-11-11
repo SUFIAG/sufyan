@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sufyan Abdul Ghani — Payments, risk &amp; compliance systems</title>
+<meta name="description" content="Senior backend engineer and product builder. Six years building payment, payroll and financial-compliance systems in Java, Spring Boot and Kafka — and six products for payment ops, fraud, reconciliation, trade finance and advertising.">
+<meta name="author" content="Sufyan Abdul Ghani">
+<link rel="canonical" href="https://sufiag.github.io/sufyan/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sufiag.github.io/sufyan/">
+<meta property="og:site_name" content="Sufyan Abdul Ghani">
+<meta property="og:title" content="Sufyan Abdul Ghani — Systems that move money">
+<meta property="og:description" content="Payments, reconciliation, fraud, AML and trade-finance systems. Java · Spring Boot · Kafka · AWS. Riyadh.">
+<meta property="og:image" content="https://sufiag.github.io/sufyan/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sufyan Abdul Ghani — Systems that move money">
+<meta name="twitter:description" content="Payments, reconciliation, fraud, AML and trade-finance systems. Riyadh.">
+<meta name="twitter:image" content="https://sufiag.github.io/sufyan/og.png">
+<meta name="theme-color" content="#F7F7F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0E19" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script src="assets/theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sufyan Abdul Ghani",
+  "jobTitle": "Senior Backend Engineer",
+  "url": "https://sufiag.github.io/sufyan/",
+  "email": "mailto:sufyan.abdulghani@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA" },
+  "knowsAbout": ["Payments", "Reconciliation", "AML screening", "Fraud detection", "Trade finance", "Java", "Spring Boot", "Kafka", "AWS"],
+  "sameAs": ["https://www.linkedin.com/in/sufyanghani/", "https://github.com/SUFIAG", "https://medium.com/@sufyanghani"]
+}
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 8l4-4 4 4M17 20V4M13 16l4 4 4-4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Sufyan Abdul Ghani, home">
+      <span class="logo-mark" aria-hidden="true">SG</span>
+      <span class="logo-text"><b>Sufyan Abdul Ghani</b><span>Backend · Fintech · Riyadh</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#products">Products</a>
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#services">Services</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="bar-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm" href="#contact">Book a call</a>
+      <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= HERO ================= -->
+  <div class="hero" id="top">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="pill rv"><span class="pulse" aria-hidden="true"></span> Available for contract work &amp; senior roles</p>
+          <h1 class="rv">I build the systems that
+            <span class="hl">move money<svg viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 80 2, 200 2, 297 7"/></svg></span>,
+            and the products that run on them.</h1>
+          <p class="lede rv">
+            Six years across cross-border payments, global payroll, AML screening and trade risk for banks and
+            fintechs in the UK, US, China and the Gulf. I work on <strong>systems where being wrong is expensive</strong>:
+            a duplicate payout, a missed sanctions hit, a settlement that won't reconcile.
+          </p>
+          <div class="hero-cta rv">
+            <a class="btn btn-primary" href="#products">Explore the products <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="#contact">Start a conversation</a>
+          </div>
+          <div class="trust rv">
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg>Java · Spring Boot · Kafka · AWS</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg>Regulated-industry delivery</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg>GMT+3, overlaps EU &amp; Gulf</span>
+          </div>
+        </div>
+
+        <div class="console rv" aria-label="Illustrative event stream from the kind of systems I build">
+          <div class="console-head">
+            <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span class="console-title">ops.events — sample stream</span>
+            <span class="live"><span class="pulse" aria-hidden="true"></span>Simulated</span>
+          </div>
+          <div class="console-kpis">
+            <div class="kpi"><div class="k">Settled</div><div class="v" id="k-settled">12,480</div></div>
+            <div class="kpi"><div class="k">Match rate</div><div class="v">99.2%<small>▲</small></div></div>
+            <div class="kpi"><div class="k">Open alerts</div><div class="v" id="k-alerts">7</div></div>
+          </div>
+          <ul class="feed" id="feed" aria-live="off"></ul>
+        </div>
+      </div>
+
+      <div class="stats rv">
+        <div class="stat"><div class="n" data-count="6" data-suffix="+">6+</div><div class="l">Years building<br>financial systems</div></div>
+        <div class="stat"><div class="n" data-count="5" data-suffix="">5</div><div class="l">Countries delivered in,<br>across 3 continents</div></div>
+        <div class="stat"><div class="n" data-count="6" data-suffix="">6</div><div class="l">Products designed<br>and built end to end</div></div>
+        <div class="stat"><div class="n" data-count="35" data-suffix="%">35%</div><div class="l">Faster AML screening<br>for regulated banks</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="clients">
+    <div class="wrap">
+      <p class="clients-label rv">Where I've built</p>
+      <div class="clients-row rv">
+        <div class="client"><b>Cloud Solutions</b><span>Billing, invoicing &amp; ZATCA e-invoicing</span><em>Riyadh · Now</em></div>
+        <div class="client"><b>BenchMatrix</b><span>AML screening, risk scoring, monitoring</span><em>Manama</em></div>
+        <div class="client"><b>Corrtec</b><span>Trade asset risk for correspondent banking</span><em>New Jersey</em></div>
+        <div class="client"><b>Small World</b><span>Cross-border payment processing</span><em>London</em></div>
+        <div class="client"><b>YeeGoo</b><span>Global payroll &amp; contractor onboarding</span><em>Beijing</em></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCTS ================= -->
+  <section id="products">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow rv">Products</p>
+          <h2 class="rv">Six products, each built around one expensive problem</h2>
+          <p class="sec-intro rv">Built on what I learned shipping the real thing for banks and fintechs. Every one keeps AI on a short leash: it does the manual work, it never makes the call a regulator will ask about.</p>
+        </div>
+        <div class="filters rv" role="group" aria-label="Filter products">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All<span class="count">6</span></button>
+          <button class="chip" type="button" data-filter="payments" aria-pressed="false">Payments<span class="count">2</span></button>
+          <button class="chip" type="button" data-filter="risk" aria-pressed="false">Risk &amp; fraud<span class="count">1</span></button>
+          <button class="chip" type="button" data-filter="trade" aria-pressed="false">Trade finance<span class="count">2</span></button>
+          <button class="chip" type="button" data-filter="marketing" aria-pressed="false">Marketing<span class="count">1</span></button>
+        </div>
+      </div>
+
+      <div class="products">
+
+        <!-- PayOps360 -->
+        <article class="product rv" data-cat="payments" style="--accent:var(--brand)" tabindex="0" role="button" aria-haspopup="dialog" aria-label="PayOps360, view details">
+          <div class="p-visual" aria-hidden="true">
+            <svg class="viz-line" viewBox="0 0 300 140" preserveAspectRatio="none">
+              <line class="grid" x1="0" y1="35" x2="300" y2="35"/><line class="grid" x1="0" y1="70" x2="300" y2="70"/><line class="grid" x1="0" y1="105" x2="300" y2="105"/>
+              <path class="area" d="M0 40 L30 38 L60 42 L90 36 L120 40 L150 44 L170 96 L190 104 L210 60 L240 42 L270 38 L300 40 L300 140 L0 140 Z"/>
+              <path class="ln" d="M0 40 L30 38 L60 42 L90 36 L120 40 L150 44 L170 96 L190 104 L210 60 L240 42 L270 38 L300 40"/>
+            </svg>
+            <span class="viz-alert"><i></i>checkout degraded · reroute</span>
+          </div>
+          <div class="p-body">
+            <div class="p-top"><span class="p-cat">Payment operations</span><span class="status"><i></i>Working demo</span></div>
+            <h3>PayOps360</h3>
+            <p class="tagline">AI-native command centre for payment ops. Every payment, provider and corridor in one live view.</p>
+            <div class="p-foot"><span class="p-stack">Java · Spring Boot · Next.js</span><span class="p-more">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+          </div>
+          <div class="p-details">
+            <div data-k="kicker">Payment operations · Working demo</div>
+            <div data-k="lead">One pane of glass for every payment in flight. An AI co-pilot sees problems first, explains them in plain language and recommends the next action.</div>
+            <div data-k="problem">Providers degrade silently. Ops teams find out from customer complaints or end-of-day reports, then lose hours across provider portals and spreadsheets finding the cause.</div>
+            <div data-k="who">Cross-border remittance operators, PSPs and payment facilitators, digital banks and EMIs, high-volume merchants.</div>
+            <ul data-k="features">
+              <li>Live monitoring of payments, providers and corridors</li>
+              <li>Anomaly detection with automatic incident correlation</li>
+              <li>“Investigate with AI” root-cause analysis on any incident</li>
+              <li>Provider health scores and reroute recommendations</li>
+              <li>MFA, RBAC and a tamper-evident audit chain</li>
+              <li>Multi-tenant, with five built-in operator roles</li>
+            </ul>
+            <div data-k="ai">Every AI feature also runs on a built-in deterministic insight engine. Without a model key, the product still works.</div>
+            <div data-k="stack">Java 17|Spring Boot 3.5|PostgreSQL|Flyway|ShedLock|Claude API|ArchUnit|Next.js 16|React 19|Tailwind v4|ECharts</div>
+            <div data-k="repo">https://github.com/SUFIAG/payOps360</div>
+          </div>
+        </article>
+
+        <!-- Tracelight -->
+        <article class="product rv" data-cat="risk" style="--accent:var(--rose)" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Tracelight, view details">
+          <div class="p-visual" aria-hidden="true">
+            <div class="viz-rows">
+              <div class="viz-row"><span>TX-88412 · new device · 3 geos/1h</span><b class="tag c-rose">94</b><div class="bar-track"><div class="bar-fill" style="--w:.94"></div></div></div>
+              <div class="viz-row"><span>TX-88397 · mule pattern match</span><b class="tag c-amber">71</b><div class="bar-track"><div class="bar-fill" style="--w:.71"></div></div></div>
+              <div class="viz-row"><span>TX-88350 · velocity spike</span><b class="tag c-teal">38</b><div class="bar-track"><div class="bar-fill" style="--w:.38"></div></div></div>
+            </div>
+          </div>
+          <div class="p-body">
+            <div class="p-top"><span class="p-cat">Fraud &amp; financial crime</span><span class="status build"><i></i>In build</span></div>
+            <h3>Tracelight</h3>
+            <p class="tagline">The AI fraud analyst that writes the case file. Thirty minutes of investigation becomes three.</p>
+            <div class="p-foot"><span class="p-stack">Java · Spring Boot · Kafka</span><span class="p-more">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+          </div>
+          <div class="p-details">
+            <div data-k="kicker">Fraud &amp; financial crime · MVP 1 in build</div>
+            <div data-k="lead">Scores transactions, raises alerts, then investigates the case in one click: narrative, fraud pattern, recommended action, all filed to an immutable audit trail.</div>
+            <div data-k="problem">Fraud analysts spend 20–40 minutes rebuilding the story behind every flagged transaction. Queues never empty, and a tired analyst rubber-stamps exactly when fraud gets through.</div>
+            <div data-k="who">Fraud teams at mid-market PSPs and digital banks. Bought by the Head of Fraud, relied on by Compliance when a regulator asks why.</div>
+            <ul data-k="features">
+              <li>Triage queue ranked by severity, signals visible up front</li>
+              <li>Case workspace: device, velocity, geography, rules, history</li>
+              <li>One-click AI investigation that drafts the case narrative</li>
+              <li>Scam and money-mule network detection</li>
+              <li>Immutable, replayable audit trail on every decision</li>
+              <li>Step-up MFA, lockout, rotating sessions, rate limits</li>
+            </ul>
+            <div data-k="ai">The model drafts. The analyst reviews and signs. Every decision stays explainable and replayable.</div>
+            <div data-k="stack">Java 17|Spring Boot 3|PostgreSQL|Redis|Kafka|Next.js 15|React 19</div>
+            <div data-k="repo">https://github.com/SUFIAG/TraceLight</div>
+          </div>
+        </article>
+
+        <!-- ReconIQ -->
+        <article class="product rv" data-cat="payments" style="--accent:var(--teal)" tabindex="0" role="button" aria-haspopup="dialog" aria-label="ReconIQ, view details">
+          <div class="p-visual" aria-hidden="true">
+            <div class="viz-match">
+              <div class="viz-col"><div>BANK 4,210.00</div><div>BANK 980.50</div><div>BANK 15,000.00</div><div>BANK 312.75</div><div class="brk">BANK 77.20</div></div>
+              <svg viewBox="0 0 44 140" preserveAspectRatio="none"><path d="M0 11 C 22 11, 22 11, 44 11"/><path d="M0 40 C 22 40, 22 69, 44 69"/><path d="M0 69 C 22 69, 22 40, 44 40"/><path d="M0 98 C 22 98, 22 98, 44 98"/><path class="brk" d="M0 127 L 44 127"/></svg>
+              <div class="viz-col"><div class="ok">ERP 4,210.00</div><div class="ok">ERP 15,000.00</div><div class="ok">ERP 980.50</div><div class="ok">ERP 312.75</div><div class="brk">— missing —</div></div>
+            </div>
+          </div>
+          <div class="p-body">
+            <div class="p-top"><span class="p-cat">Reconciliation</span><span class="status"><i></i>Working backend</span></div>
+            <h3>ReconIQ</h3>
+            <p class="tagline">Matches bank feeds, ledgers, gateways and ERP, then explains every break in plain language.</p>
+            <div class="p-foot"><span class="p-stack">Java · Spring Boot · Next.js</span><span class="p-more">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+          </div>
+          <div class="p-details">
+            <div data-k="kicker">Reconciliation · Working backend</div>
+            <div data-k="lead">Rule-based matching across bank statements, payment gateways, ERP, invoices and supplier payments, with exceptions classified and explained.</div>
+            <div data-k="problem">Every payments company solves reconciliation badly at least once. Finance teams spend month-end in spreadsheets, and “unmatched” hides five different problems.</div>
+            <div data-k="who">Finance operations and treasury teams at PSPs, marketplaces and mid-size companies with multiple banks and gateways.</div>
+            <ul data-k="features">
+              <li>Ingests bank, gateway, ERP, invoice and supplier files</li>
+              <li>Four matching strategies, from exact to fuzzy</li>
+              <li>1:1, 1:N and N:M matching</li>
+              <li>Exception detection: amount mismatch, missing, duplicate</li>
+              <li>AI explanation for every exception</li>
+              <li>Review workflow, reporting and multi-organisation access</li>
+            </ul>
+            <div data-k="ai">Matching is deterministic and rule-based. AI only explains the break, so an auditor can always trace why two records matched.</div>
+            <div data-k="stack">Java 17|Spring Boot|Hexagonal DDD|PostgreSQL|JWT|Next.js</div>
+            <div data-k="repo">https://github.com/SUFIAG/reconiq</div>
+          </div>
+        </article>
+
+        <!-- TradeAsset LC Check -->
+        <article class="product rv" data-cat="trade" style="--accent:var(--amber)" tabindex="0" role="button" aria-haspopup="dialog" aria-label="TradeAsset LC Check, view details">
+          <div class="p-visual" aria-hidden="true">
+            <div class="viz-doc">
+              <div class="doc-page"><i></i><i></i><i></i><i></i><i class="hit"></i><i></i><i></i><i></i><i></i><i class="hit"></i><i></i><i></i></div>
+              <div class="doc-checks">
+                <div><b class="tag c-teal">PASS</b>Art. 18 · Invoice amount</div>
+                <div><b class="tag c-rose">FLAG</b>Art. 14(d) · Data conflict</div>
+                <div><b class="tag c-teal">PASS</b>Art. 20 · Bill of lading</div>
+              </div>
+            </div>
+          </div>
+          <div class="p-body">
+            <div class="p-top"><span class="p-cat">Trade finance</span><span class="status"><i></i>Working demo</span></div>
+            <h3>TradeAsset LC Check</h3>
+            <p class="tagline">Letter-of-credit document examination against UCP 600 and ISBP, with cited, bilingual findings.</p>
+            <div class="p-foot"><span class="p-stack">Python · FastAPI · Next.js</span><span class="p-more">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+          </div>
+          <div class="p-details">
+            <div data-k="kicker">Trade finance · Working demo</div>
+            <div data-k="lead">LC intake, presentation intake and a versioned rule engine that examines documents and cites the article behind every finding, in English and Arabic.</div>
+            <div data-k="problem">Document checkers examine every presentation by hand against hundreds of rules. Discrepancies get missed, decisions vary by examiner, and the reasoning is rarely written down.</div>
+            <div data-k="who">Trade finance operations at banks in the Gulf and beyond: makers, checkers and the operations heads accountable for them.</div>
+            <ul data-k="features">
+              <li>LC intake from MT700 and MT707</li>
+              <li>Versioned UCP 600 / ISBP rule engine</li>
+              <li>Every finding cites the rule it came from</li>
+              <li>Bilingual output, English and Arabic</li>
+              <li>Maker-checker decisions and multi-tenant banks</li>
+              <li>SSO (OIDC), webhooks, retention jobs, Prometheus metrics</li>
+            </ul>
+            <div data-k="ai">The rule engine decides. AI writes optional explanations and notices; without a key, deterministic templates take over.</div>
+            <div data-k="stack">Python 3.12|FastAPI|SQLAlchemy 2|Alembic|PostgreSQL|Next.js|Docker</div>
+            <div data-k="repo">https://github.com/SUFIAG/TradeAsset-LCCheck</div>
+          </div>
+        </article>
+
+        <!-- TradeAsset -->
+        <article class="product rv" data-cat="trade" style="--accent:var(--violet)" tabindex="0" role="button" aria-haspopup="dialog" aria-label="TradeAsset, view details">
+          <div class="p-visual" aria-hidden="true">
+            <div class="viz-rows">
+              <div class="viz-row"><span>Counterparty A · LC exposure</span><b class="tag c-violet">$4.2M</b><div class="bar-track"><div class="bar-fill" style="--w:.82"></div></div></div>
+              <div class="viz-row"><span>Counterparty B · guarantees</span><b class="tag c-violet">$2.7M</b><div class="bar-track"><div class="bar-fill" style="--w:.54"></div></div></div>
+              <div class="viz-row"><span>Counterparty C · collections</span><b class="tag c-violet">$1.1M</b><div class="bar-track"><div class="bar-fill" style="--w:.24"></div></div></div>
+            </div>
+          </div>
+          <div class="p-body">
+            <div class="p-top"><span class="p-cat">Trade asset risk</span><span class="status early"><i></i>Pre-MVP</span></div>
+            <h3>TradeAsset</h3>
+            <p class="tagline">Exposure across counterparties and instruments, with an audit trail on every risk-affecting write.</p>
+            <div class="p-foot"><span class="p-stack">Java · Spring Boot · React</span><span class="p-more">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+          </div>
+          <div class="p-details">
+            <div data-k="kicker">Trade asset risk · Pre-MVP</div>
+            <div data-k="lead">A cleaner take on the domain I worked in at Corrtec: portfolio risk and exposure tracking for trade finance, with auditability as a design input rather than a retrofit.</div>
+            <div data-k="problem">Trade finance risk still lives in spreadsheets and legacy cores. Exposure is hard to aggregate, and nobody can say who changed a limit and why.</div>
+            <div data-k="who">Trade finance and correspondent banking risk teams.</div>
+            <ul data-k="features">
+              <li>Exposure aggregation across counterparties and instruments</li>
+              <li>Append-only audit trail; no in-place balance mutation</li>
+              <li>No floating-point money anywhere in the codebase</li>
+              <li>Role-based access modelled on bank segregation of duties</li>
+              <li>Document storage and event streaming built in</li>
+              <li>Explicit authorisation rule on every endpoint</li>
+            </ul>
+            <div data-k="ai">Risk numbers come from deterministic calculation only. Correctness rules are enforced in code review, not left to convention.</div>
+            <div data-k="stack">Java 17|Spring Boot 3.3|Hexagonal|PostgreSQL|Kafka|Redis|MinIO|React 19|Vite</div>
+            <div data-k="repo">https://github.com/SUFIAG/tradeasset</div>
+          </div>
+        </article>
+
+        <!-- Verdict -->
+        <article class="product rv" data-cat="marketing" style="--accent:var(--sky)" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Verdict, view details">
+          <div class="p-visual" aria-hidden="true">
+            <div class="viz-decide">
+              <div><span>Brand Search · ROAS 2.1× target</span><b class="tag c-teal">SCALE</b></div>
+              <div><span>Retargeting · CPA 1.6× target</span><b class="tag c-amber">PROTECT</b></div>
+              <div><span>Prospecting · tracking gap 40%</span><b class="tag c-rose">INVESTIGATE</b></div>
+              <div><span>New Launch · learning phase</span><b class="tag c-sky">OBSERVE</b></div>
+            </div>
+          </div>
+          <div class="p-body">
+            <div class="p-top"><span class="p-cat">Digital marketing</span><span class="status"><i></i>MVP</span></div>
+            <h3>Verdict</h3>
+            <p class="tagline">Decision intelligence for advertising. One clear decision per campaign, or a refusal when the data can't be trusted.</p>
+            <div class="p-foot"><span class="p-stack">Python · FastAPI · HTMX</span><span class="p-more">Details <svg aria-hidden="true"><use href="#i-arrow"/></svg></span></div>
+          </div>
+          <div class="p-details">
+            <div data-k="kicker">Digital marketing · MVP</div>
+            <div data-k="lead">Connects to ad accounts and the website, measures what really happened, and tells the business the one most important thing to do about each campaign, with the evidence.</div>
+            <div data-k="problem">Media buyers open six ad dashboards every day, reconcile numbers each platform over-claims, miss broken tracking, and write reports by hand. It is slow, inconsistent and often wrong.</div>
+            <div data-k="who">Advertisers' marketing managers, and agencies running many client workspaces from one login.</div>
+            <ul data-k="features">
+              <li>Google Ads connector, plus CSV import from Meta, TikTok, Snapchat, LinkedIn and X</li>
+              <li>AI column mapper normalises any export into one vocabulary</li>
+              <li>First-party website tag under 4 KB, no fingerprinting</li>
+              <li>Independent attribution compared against platform claims</li>
+              <li>Decisions: Scale, Protect, Observe, Investigate</li>
+              <li>AI rule compiler, decision explanations and a weekly brief</li>
+            </ul>
+            <div data-k="ai">AI replaces the manual work; it never chooses the decision. Same snapshot plus same ruleset gives byte-identical output, and data-quality rules override everything.</div>
+            <div data-k="stack">Python 3.12|FastAPI|Pydantic v2|SQLAlchemy 2|HTMX|Claude API|uv</div>
+            <div data-k="repo"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORK ================= -->
+  <section id="work" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow rv">Selected work</p>
+          <h2 class="rv">Three client systems, and what was actually hard</h2>
+          <p class="sec-intro rv">Architecture diagrams all look the same. The interesting part is the constraint you couldn't design around.</p>
+        </div>
+      </div>
+
+      <div class="cases rv">
+        <div class="case-tabs" role="tablist" aria-label="Case studies">
+          <button class="case-tab" role="tab" id="tab-1" aria-controls="case-1" aria-selected="true"><b>Retry-safe payouts</b><span>Small World · London</span></button>
+          <button class="case-tab" role="tab" id="tab-2" aria-controls="case-2" aria-selected="false" tabindex="-1"><b>Asynchronous onboarding</b><span>YeeGoo · EOR platform</span></button>
+          <button class="case-tab" role="tab" id="tab-3" aria-controls="case-3" aria-selected="false" tabindex="-1"><b>Quieter AML screening</b><span>BenchMatrix · Risk Nucleus</span></button>
+        </div>
+
+        <div>
+          <article class="case-panel" role="tabpanel" id="case-1" aria-labelledby="tab-1">
+            <h3>Payment processing on the transfer path</h3>
+            <p class="case-org">Small World Financial Services · London</p>
+            <div class="case-stack"><span>Java</span><span>Spring Boot</span><span>Hibernate</span><span>AWS</span><span>Kubernetes</span><span>ArgoCD</span></div>
+            <dl class="beats">
+              <div class="beat"><dt>Problem</dt><dd>A money-transfer network where a payout provider can accept a request, time out before responding, and still have moved the money.</dd></div>
+              <div class="beat"><dt>Constraint</dt><dd>No ability to change the provider's API. Retries were mandatory for reliability, and a naive retry is a duplicate payout.</dd></div>
+              <div class="beat"><dt>Decision</dt><dd>Idempotency keys generated at the transfer boundary rather than the request boundary, with provider responses reconciled asynchronously against a local state machine instead of trusted synchronously.</dd></div>
+              <div class="beat result"><dt>Result</dt><dd>Retry-safe payouts under partial provider failure, plus a rebuilt release pipeline and observability stack.</dd></div>
+            </dl>
+            <div class="metric-row"><div class="metric"><b>40%</b><span>faster deployments</span></div><div class="metric"><b>2×</b><span>faster incident detection</span></div></div>
+          </article>
+
+          <article class="case-panel" role="tabpanel" id="case-2" aria-labelledby="tab-2" hidden>
+            <h3>Contractor onboarding, made asynchronous</h3>
+            <p class="case-org">YeeGoo Technologies · Employer-of-record platform</p>
+            <div class="case-stack"><span>Java 21</span><span>Spring Boot 3</span><span>Kafka</span><span>AWS</span></div>
+            <dl class="beats">
+              <div class="beat"><dt>Problem</dt><dd>Onboarding a contractor in a new country blocked on third-party identity and compliance checks that could take minutes or days.</dd></div>
+              <div class="beat"><dt>Constraint</dt><dd>The flow was synchronous end to end. Users watched a spinner, and every verification provider outage became a platform outage.</dd></div>
+              <div class="beat"><dt>Decision</dt><dd>Decomposed onboarding into Kafka-driven stages with an explicit per-contractor state machine, so verification became an event the system waits for rather than a call it blocks on.</dd></div>
+              <div class="beat result"><dt>Result</dt><dd>Provider outages degraded to delays rather than failures. I led the four engineers who built it, across three time zones.</dd></div>
+            </dl>
+            <div class="metric-row"><div class="metric"><b>~30%</b><span>shorter onboarding</span></div><div class="metric"><b>~20%</b><span>faster activation</span></div><div class="metric"><b>4</b><span>engineers led</span></div></div>
+          </article>
+
+          <article class="case-panel" role="tabpanel" id="case-3" aria-labelledby="tab-3" hidden>
+            <h3>Watchlist screening compliance teams could live with</h3>
+            <p class="case-org">BenchMatrix · Risk Nucleus AML platform · Manama</p>
+            <div class="case-stack"><span>Java</span><span>Spring</span><span>SQL</span><span>Screening APIs</span></div>
+            <dl class="beats">
+              <div class="beat"><dt>Problem</dt><dd>Sanctions and PEP screening for regulated banks, where the failure mode nobody talks about isn't the missed hit. It's the thousands of false positives that bury the real one.</dd></div>
+              <div class="beat"><dt>Constraint</dt><dd>Loosening the matching threshold is a regulatory risk. Screening had to get faster and quieter without getting less sensitive.</dd></div>
+              <div class="beat"><dt>Decision</dt><dd>Restructured the query path and the integration with external screening providers, then tightened name-matching and risk-scoring logic so precision improved without moving the recall threshold.</dd></div>
+              <div class="beat result"><dt>Result</dt><dd>A materially lighter review queue for client compliance teams — the metric they actually complain about.</dd></div>
+            </dl>
+            <div class="metric-row"><div class="metric"><b>35%</b><span>faster screening response</span></div><div class="metric"><b>0</b><span>change to recall threshold</span></div></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPROACH ================= -->
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow rv">Approach</p>
+          <h2 class="rv">Where a model earns its place in a financial system</h2>
+          <p class="sec-intro rv">Financial systems are a bad place for magic. Anything non-deterministic has to be auditable, bounded, and reviewable by someone who will be asked to justify it to a regulator.</p>
+        </div>
+      </div>
+      <div class="principles">
+        <div class="principle rv"><div class="ic c-brand"><svg aria-hidden="true"><use href="#i-target"/></svg></div><h3>The model proposes, a threshold decides</h3><p>In document processing, extraction and classification come from a model; a confidence threshold decides; anything below it goes to a person.</p></div>
+        <div class="principle rv"><div class="ic c-rose"><svg aria-hidden="true"><use href="#i-shield"/></svg></div><h3>A model can flag. Only a rule can block.</h3><p>Anomaly detection sits beside deterministic rules, not in place of them. That split keeps every stopped transaction explainable.</p></div>
+        <div class="principle rv"><div class="ic c-teal"><svg aria-hidden="true"><use href="#i-eye"/></svg></div><h3>Precision over cleverness</h3><p>The win in AML isn't a smarter algorithm. It's fewer false positives at unchanged recall: a workload problem before a modelling one.</p></div>
+        <div class="principle rv"><div class="ic c-amber"><svg aria-hidden="true"><use href="#i-doc"/></svg></div><h3>Works without the AI</h3><p>Every product here has a deterministic fallback. If the model is down or the key is missing, the system degrades to templates, never to failure.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow rv">Services</p>
+          <h2 class="rv">Ways to work together</h2>
+          <p class="sec-intro rv">Contract engagements of 10–15 hours a week, mostly for fintechs scaling past their first architecture. Every engagement starts with a free 30-minute call.</p>
+        </div>
+      </div>
+      <div class="services">
+        <div class="svc rv">
+          <div class="num">01</div>
+          <h3>Payment reliability audit</h3>
+          <p>A read of your payment path for the failures that only appear under load or provider outage.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Idempotency and retry hazard review</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Reconciliation blind-spot map</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Written report with ranked fixes</li>
+          </ul>
+          <div class="terms"><span>Fixed scope</span><b>3 weeks</b></div>
+        </div>
+        <div class="svc featured rv">
+          <span class="badge">Most requested</span>
+          <div class="num">02</div>
+          <h3>Fractional backend lead</h3>
+          <p>Architecture, code review and release discipline for a team that has outgrown everyone remembering why things were built that way.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Architecture and design reviews</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Code review and mentoring</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>CI/CD, observability, on-call hygiene</li>
+          </ul>
+          <div class="terms"><span>Monthly retainer</span><b>10–15 h / week</b></div>
+        </div>
+        <div class="svc rv">
+          <div class="num">03</div>
+          <h3>Event-driven migration</h3>
+          <p>Moving a synchronous flow onto Kafka without losing the audit trail, ordering, or the answer to “where is this transaction now?”</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Target design and migration plan</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>State machines and outbox patterns</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Hands-on build with your team</li>
+          </ul>
+          <div class="terms"><span>Scoped project</span><b>6–12 weeks</b></div>
+        </div>
+      </div>
+
+      <div class="process rv" aria-label="How an engagement runs">
+        <div class="step"><span class="sn">1</span><b>Intro call</b><span>30 minutes. Your system, your constraint, honest fit check.</span></div>
+        <div class="step"><span class="sn">2</span><b>Scope</b><span>Written scope, timeline and fixed price within 3 working days.</span></div>
+        <div class="step"><span class="sn">3</span><b>Deliver</b><span>Weekly written updates. Work happens in your repo and tools.</span></div>
+        <div class="step"><span class="sn">4</span><b>Hand over</b><span>Docs, decision records and a walkthrough, so nothing depends on me.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow rv">FAQ</p>
+          <h2 class="rv">Questions people usually ask first</h2>
+        </div>
+      </div>
+      <div class="faq rv">
+        <details>
+          <summary>Can we pilot one of your products?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>Yes. Pilots run for 30 days on your own data, with a demo first. Status labels on each product are honest: “Working demo” can be shown today, “In build” and “Pre-MVP” are open to design partners.</p></div>
+        </details>
+        <details>
+          <summary>How does contract work fit around your current role?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>Engagements are capped at 10–15 hours a week, scheduled in advance, with no conflict of interest with my employer. I'm in Riyadh (GMT+3), which overlaps European and Gulf working hours.</p></div>
+        </details>
+        <details>
+          <summary>Are you open to full-time roles?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>For the right senior or staff backend role in payments, risk or compliance, yes. Mention the system you need built and I'll tell you honestly whether I'm the right fit for it.</p></div>
+        </details>
+        <details>
+          <summary>How do you handle confidential or regulated data?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>NDA before any code or data is shared. I work inside your environment and access controls, and no client data goes to an AI tool without your written approval.</p></div>
+        </details>
+        <details>
+          <summary>Do you use AI to write code?<span class="plus" aria-hidden="true"></span></summary>
+          <div class="ans"><p>Yes, heavily, to build faster. Everything it produces is a first draft that has to pass tests, review and a load test before it goes near a payment path.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="contact">
+        <div class="contact-side">
+          <p class="eyebrow rv">Contact</p>
+          <h2 class="rv">Worth a conversation?</h2>
+          <p class="rv">Tell me about the system, the product you'd like to see, or the role. I read everything and reply to anything specific within two working days.</p>
+          <ul class="contact-links rv">
+            <li><a href="mailto:sufyan.abdulghani@gmail.com"><b>Email</b><span>sufyan.abdulghani@gmail.com</span></a></li>
+            <li><a href="https://www.linkedin.com/in/sufyanghani/" target="_blank" rel="noopener"><b>LinkedIn</b><span>in/sufyanghani ↗</span></a></li>
+            <li><a href="https://github.com/SUFIAG" target="_blank" rel="noopener"><b>GitHub</b><span>SUFIAG ↗</span></a></li>
+            <li><a href="https://medium.com/@sufyanghani" target="_blank" rel="noopener"><b>Writing</b><span>Medium ↗</span></a></li>
+            <li><a href="Sufyan-Abdul-Ghani-Resume.pdf" download><b>Résumé</b><span>PDF ↓</span></a></li>
+          </ul>
+        </div>
+
+        <form class="form rv" id="contact-form" novalidate>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+          <div class="field"><label for="f-topic">I'm interested in</label>
+            <select id="f-topic" name="topic">
+              <option>A product demo or pilot</option>
+              <option>Payment reliability audit</option>
+              <option>Fractional backend lead</option>
+              <option>Event-driven migration</option>
+              <option>A full-time role</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field full"><label for="f-msg">What are you working on?</label><textarea id="f-msg" name="message" required placeholder="The system, the constraint, and what a good outcome looks like."></textarea></div>
+          <div class="form-foot">
+            <small>Opens your email app with the message ready to send.</small>
+            <button class="btn btn-primary" type="submit">Send message <svg aria-hidden="true"><use href="#i-send"/></svg></button>
+          </div>
+          <p class="form-note" id="form-note" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band alt" style="background:var(--bg-alt)">
+    <div class="wrap">
+      <div class="cta-inner rv">
+        <div>
+          <h2>See a product running on real data</h2>
+          <p>A 30-minute walkthrough of PayOps360, ReconIQ, LC Check or Verdict, using the scenario closest to your business.</p>
+        </div>
+        <a class="btn btn-primary" href="#contact" data-topic="A product demo or pilot">Request a demo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Sufyan Abdul Ghani · Riyadh, Saudi Arabia</span>
+    <nav aria-label="Footer">
+      <a href="#products">Products</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="https://github.com/SUFIAG" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/sufyanghani/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- Product detail dialog -->
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-inner">
+    <div class="sheet-head">
+      <div>
+        <span class="p-cat" id="sheet-kicker"></span>
+        <h3 id="sheet-title"></h3>
+        <p id="sheet-lead"></p>
+      </div>
+      <button class="icon-btn" type="button" data-close aria-label="Close"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="sheet-body">
+      <div class="d-grid">
+        <div class="d-card"><h4>The problem</h4><p id="sheet-problem"></p></div>
+        <div class="d-card"><h4>Built for</h4><p id="sheet-who"></p></div>
+      </div>
+      <div class="d-section"><h4>What it does</h4><ul class="d-list" id="sheet-features"></ul></div>
+      <p class="d-ai" id="sheet-ai"></p>
+      <div class="d-section"><h4>Stack</h4><div class="d-stack" id="sheet-stack"></div></div>
+      <div class="d-actions">
+        <a class="btn btn-primary" href="#contact" data-close data-topic="A product demo or pilot" id="sheet-demo">Request a demo <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" id="sheet-repo" target="_blank" rel="noopener">View source <svg aria-hidden="true"><use href="#i-link"/></svg></a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<a class="to-top icon-btn" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
